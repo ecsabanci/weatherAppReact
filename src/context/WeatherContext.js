@@ -10,16 +10,21 @@ export const WeatherProvider = ({ children }) => {
   useEffect(() => {
     axios(
       `https://api.openweathermap.org/data/2.5/weather?q=${location.name}&appid=c12cd420fd24effa0b81b33c545c0f3a`
-    ).then((response) => {
-      setResponse(response);
-      // console.log("response", response.data);
-    });
+    )
+      .then((response) => {
+        setResponse(response);
+        // console.log("response", response.data);
+      })
+      .catch((err) => console.log(err));
   }, [location]);
+
+  // axios("../cities.json").then((response) => console.log(response));
 
   const values = {
     location,
     setLocation,
-    response
+    response,
+    setResponse
   };
 
   return (
