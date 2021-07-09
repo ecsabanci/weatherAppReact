@@ -4,7 +4,7 @@ import axios from "axios";
 const WeatherContext = createContext();
 
 export const WeatherProvider = ({ children }) => {
-  const [location, setLocation] = useState({ name: "Ankara" });
+  const [location, setLocation] = useState({ name: "Adana" });
   const [response, setResponse] = useState("");
 
   useEffect(() => {
