@@ -24,7 +24,7 @@ export const WeatherProvider = ({ children }) => {
     location,
     setLocation,
     response,
-    setResponse
+    setResponse,
   };
 
   return (
